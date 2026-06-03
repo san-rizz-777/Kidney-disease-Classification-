@@ -2,4 +2,5 @@
 notebooks/.ipynb_checkpoints/*
 __pycache__/
 kidney_tumor_scan_data.zip
-artifacts/data_ingestion/
+artifacts/*
+logs/

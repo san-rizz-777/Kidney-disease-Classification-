@@ -40,7 +40,7 @@ def create_directories(path_to_directories: list, verbose=True):
         verbose : bool(amount of logging
     """
     for path in path_to_directories:
-        os.makdirs(path,exist_ok=True)
+        os.makedirs(path,exist_ok=True)
         if verbose:
             logger.info(f"Created directory at :{path}")
 
