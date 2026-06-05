@@ -1,5 +1,4 @@
 import os
-import ensure
 from box import ConfigBox
 from box.exceptions import BoxValueError
 import yaml
@@ -7,6 +6,7 @@ from ensure import ensure_annotations
 from pathlib import Path
 from cnnClassifier import logger
 import json
+import base64
 
 
 
@@ -75,3 +75,16 @@ def load_json(path: Path) -> ConfigBox:
     logger.info(f"loaded json file from {path}")
     return ConfigBox(data)
 
+
+# to encode the image to base 64
+def encodeImage(cropped_image):
+    with open(cropped_image, 'rb') as f:
+        return base64.b64encode(f.read())
+
+
+# To decode the image and write it into the file
+def decodeImage(imgString, filename):
+    imgData = base64.b64decode(imgString)
+    with open(filename, "wb") as f:
+        f.write(imgData)
+        f.close()
