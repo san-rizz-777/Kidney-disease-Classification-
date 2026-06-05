@@ -42,7 +42,7 @@ class DataIngestion:
 
         # Rename the extracted folder to the desired name
         extracted_folder = os.path.join(self.config.unzip_dir, "CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone")
-        desired_folder = os.path.join(self.config.unzip_dir, "kidney_ct_scan_dataset/kidney_ct_scan_dataset")
+        desired_folder = os.path.join(self.config.unzip_dir, "kidney_ct_scan_dataset")
 
         if os.path.exists(extracted_folder):
             os.rename(extracted_folder, desired_folder)
