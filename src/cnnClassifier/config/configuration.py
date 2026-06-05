@@ -3,6 +3,7 @@ from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import DataIngestionConfig
 from cnnClassifier.entity.config_entity import PrepareBaseModelConfig
 from cnnClassifier.entity.config_entity import TrainingConfig
+from cnnClassifier.entity.config_entity import EvalConfig
 import os
 
 class ConfigurationManager:
@@ -67,3 +68,16 @@ class ConfigurationManager:
                                          params_learning_rate=params.LEARNING_RATE)
 
         return training_config
+
+
+    def get_eval_config(self) -> EvalConfig:
+        eval_config = EvalConfig(
+            path_of_model="artifacts/training/model.h5",
+            training_data="artifacts/data_ingestion/kidney_ct_scan_dataset/kidney_ct_scan_dataset",
+            mlflow_uri="https://dagshub.com/gundesanskar71/Kidney-disease-Classification-.mlflow",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+
+        return eval_config
