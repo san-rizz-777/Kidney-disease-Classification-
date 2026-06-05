@@ -4,3 +4,5 @@ __pycache__/
 kidney_tumor_scan_data.zip
 artifacts/*
 logs/
+mlruns/
+mlflow.db

@@ -1,6 +1,7 @@
 from cnnClassifier.component.evaluation import Evaluation
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier import logger
+import dagshub
 
 
 
@@ -11,6 +12,7 @@ class EvaluationModelPipeline:
         pass
 
     def main(self):
+        dagshub.init(repo_owner='gundesanskar71', repo_name='Kidney-disease-Classification-', mlflow=True)
         config = ConfigurationManager()
         eval_config = config.get_eval_config()
         eval_ = Evaluation(eval_config)
