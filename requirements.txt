@@ -9,3 +9,4 @@ python-box==7.4.1
 PyYAML==6.0.3
 ensure==1.0.4
 python-dotenv==1.2.2
+-e .
