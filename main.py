@@ -4,6 +4,7 @@ from cnnClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelT
 from cnnClassifier.pipeline.stage_03_training_model import TrainingModelPipeline
 from cnnClassifier.pipeline.stage_04_model_evaluation import EvaluationModelPipeline
 
+
 STAGE_NAME = "DataIngestion Stage"
 try:
     logger.info(f"Stage started!!!! >> {STAGE_NAME}!!!!")

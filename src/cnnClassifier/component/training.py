@@ -1,6 +1,9 @@
 import tensorflow as tf
 from pathlib import Path
 from cnnClassifier.config.configuration import TrainingConfig
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+from tensorflow.keras import mixed_precision
+mixed_precision.set_global_policy('mixed_float16')
 
 
 
