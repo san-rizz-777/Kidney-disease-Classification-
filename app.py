@@ -8,7 +8,7 @@ from cnnClassifier.pipeline.prediction import PredictionPipeline
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)         # Allows the cross origin requests
 
 class ClientApp:
     def __init__(self):

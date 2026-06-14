@@ -9,7 +9,7 @@ class PredictionPipeline:
 
     def predict(self):
             # load the model
-        model = load_model(os.path.join('artifacts', 'training', 'model.h5'))
+        model = load_model(os.path.join('models', 'model.h5'))
 
         image_name = self.filename
         test_image = image.load_img(image_name, target_size=(224, 224))
