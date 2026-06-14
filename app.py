@@ -35,7 +35,6 @@ def predictRoute():
     result = cApp.classifier.predict()
     return jsonify(result)
 
-
+cApp = ClientApp()
 if __name__ == "__main__":
-    cApp = ClientApp()
     app.run(host="0.0.0.0", port=8000)
