@@ -24,7 +24,6 @@ cffi==2.0.0
 charset-normalizer==3.4.7
 click==8.4.1
 cloudpickle==3.1.2
--e git+ssh://git@github.com/san-rizz-777/Kidney-disease-Classification-.git@7203da5e9f98e50c9952620a17f05b1aaa45e81d#egg=cnnClassifier
 comm==0.2.3
 contourpy==1.3.3
 cryptography==46.0.7
